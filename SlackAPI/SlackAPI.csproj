@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BearerTokenResponse.cs" />
     <Compile Include="OAuthMessage.cs" />
     <Compile Include="OAuthResponseMessage.cs" />
     <Compile Include="Program.cs" />

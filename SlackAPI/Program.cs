@@ -32,13 +32,20 @@ namespace SlackAPI
 
         static async Task<HttpResponseMessage> AuthAsync()
         {
+            //full endpoint url
             string url = $"{_apiUrl}/oauth/authorize/?";
 
+            //full request url params
             string requestString = $"client_id={_clientId}&scope={_scope}" +
                 $"&redirect_uri={_redirectUri}";
 
+            //the get request to the url with the query params
             var response = await client.GetAsync($"{url} + {requestString}");
             Console.WriteLine(response);
+
+            //reading response as string
+            var stringResponse = await response.Content.ReadAsStringAsync();
+            Console.WriteLine(stringResponse);
 
             return response;
         }
@@ -57,7 +64,6 @@ namespace SlackAPI
                 "application/json"));
 
             var result = await AuthAsync();
-            Console.WriteLine(result.Content.ReadAsStringAsync());
 
         }
 
