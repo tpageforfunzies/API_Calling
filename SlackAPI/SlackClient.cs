@@ -25,22 +25,31 @@ namespace SlackAPI
             }
         }
 
-        //protected override Endpoint AccessCodeServiceEndpoint
-        //{
-        //    get
-        //    {
-        //        return new Endpoint
-        //        {
-        //            BaseUri = "https://slack.com/oauth/authorize"
-        //        }
-        //    }
-        //}
+        protected override Endpoint AccessCodeServiceEndpoint
+        {
+            get
+            {
+                return new Endpoint
+                {
+                    BaseUri = "https://slack.com",
+                    Resource = "/oauth/authorize"
+                };
+            }
+        }
 
-        protected override Endpoint AccessTokenServiceEndpoint => throw new NotImplementedException();
+        protected override Endpoint AccessTokenServiceEndpoint
+        {
+            get
+            {
+                return new Endpoint
+                {
+                    BaseUri = "https://slack.com",
+                    Resource = "/api/oauth.access"
+                };
+            }
+        }
 
         protected override Endpoint UserInfoServiceEndpoint => throw new NotImplementedException();
-
-        protected override Endpoint AccessCodeServiceEndpoint => throw new NotImplementedException();
 
         protected override UserInfo ParseUserInfo(string content)
         {
