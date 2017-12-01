@@ -20,6 +20,10 @@ namespace SlackAPI
         //       then calling postmessage in runasync using the accesstoken
         //       main is just the runasync
         //       redirecturi would be "localhost" or 127.0.0.1:port/
+        
+        //       it is sending the redirecturl to sign in
+        //       need to open browser window from console, let me log in, and get the code
+        //       similar to how the github sign in from commandline works
 
         public static string BearerToken { get; set; }
         private const string _apiUrl = "https://slack.com/";
