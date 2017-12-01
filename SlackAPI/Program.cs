@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace SlackAPI
 {
@@ -50,6 +51,10 @@ namespace SlackAPI
             //reading response as string
             var stringResponse = await response.Content.ReadAsStringAsync();
             Console.WriteLine(stringResponse);
+            Console.ReadLine();
+
+            //Process.Start($"{response}");
+
 
             return response;
         }
