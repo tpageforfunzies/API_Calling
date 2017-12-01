@@ -115,14 +115,5 @@ namespace API_Calling
 
             Console.ReadLine();
         }
-
-
-
-
-
-
-
-
-
     }
 }
