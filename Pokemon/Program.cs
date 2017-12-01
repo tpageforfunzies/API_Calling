@@ -10,6 +10,7 @@ namespace Pokemon
 
     class Program
     {
+
         static HttpClient client = new HttpClient();
 
         static void ShowPokemon(Pokemon pokemon)
