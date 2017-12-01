@@ -18,6 +18,7 @@ namespace SlackAPI
         //       then a if (!auth) in the main runasync to check if token is still good
         //       then calling postmessage in runasync using the accesstoken
         //       main is just the runasync
+        //       redirecturi would be "localhost" or 127.0.0.1:port/
 
 
         static HttpClient client = new HttpClient();
