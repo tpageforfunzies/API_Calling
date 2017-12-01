@@ -30,12 +30,12 @@ namespace SlackAPI
 
         static HttpClient client = new HttpClient();
 
-        static async Task<HttpResponseMessage> Auth()
+        static async Task<HttpResponseMessage> AuthAsync()
         {
             string url = $"{_apiUrl}/oauth/authorize/?";
 
             string requestString = $"client_id={_clientId}&scope={_scope}" +
-                $"redirect_uri={_redirectUri}";
+                $"&redirect_uri={_redirectUri}";
 
             var response = await client.GetAsync($"{url} + {requestString}");
             Console.WriteLine(response);
@@ -50,13 +50,14 @@ namespace SlackAPI
 
         static async Task RunAsync()
         {
-            //client.DefaultRequestHeaders.Accept.Clear();
-            //client.DefaultRequestHeaders.Accept.Add(
-            //    new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("" +
-            //    "application/json"));
+            client.BaseAddress = new Uri("http://localhost/");
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(
+                new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("" +
+                "application/json"));
 
-            var result = await Auth();
-            Console.WriteLine(result);
+            var result = await AuthAsync();
+            Console.WriteLine(result.Content.ReadAsStringAsync());
 
         }
 
