@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Calling", "API_Calling\API_Calling.csproj", "{F4130254-1345-4FF7-B851-DFC0849B37DB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon", "Pokemon\Pokemon.csproj", "{C048006C-5D9D-410C-B2F1-18D081180638}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlackAPI", "SlackAPI\SlackAPI.csproj", "{894C11CE-59BE-4AC5-A661-FAECEA69224D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{EB8BF71B-2009-4241-9BB3-F3F6AF087233}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp.Services", "WebApp.Services\WebApp.Services.csproj", "{4C8F84D9-B905-4FC9-A266-3209CCEFFBA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{894C11CE-59BE-4AC5-A661-FAECEA69224D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{894C11CE-59BE-4AC5-A661-FAECEA69224D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{894C11CE-59BE-4AC5-A661-FAECEA69224D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB8BF71B-2009-4241-9BB3-F3F6AF087233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB8BF71B-2009-4241-9BB3-F3F6AF087233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB8BF71B-2009-4241-9BB3-F3F6AF087233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB8BF71B-2009-4241-9BB3-F3F6AF087233}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C8F84D9-B905-4FC9-A266-3209CCEFFBA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C8F84D9-B905-4FC9-A266-3209CCEFFBA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C8F84D9-B905-4FC9-A266-3209CCEFFBA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C8F84D9-B905-4FC9-A266-3209CCEFFBA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
